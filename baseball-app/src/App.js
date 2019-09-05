@@ -45,6 +45,7 @@ function App() {
     }
   }
 
+
   return (
     <div className="App">
       <h1>Baseball game, yo!</h1>
@@ -56,6 +57,7 @@ function App() {
         updateStrikes={updateStrikes}
         updateBalls={updateBalls}
         foulIsFoul={foulIsFoul}
+        strikes={strikes}
         onHit={onHit}
       />
     </div>
