@@ -1,7 +1,7 @@
 import React from 'react';
-import { render, fireEvent } from "@testing-library/react";
+import { render } from "@testing-library/react";
 import ReactDOM from 'react-dom';
-import App from './App';
+import App, { problem } from './App';
 
 it('renders without crashing', () => {
   const div = document.createElement('div');
@@ -29,3 +29,7 @@ test("contains strike button", () => {
   myDoc.queryAllByTitle(/strike/i);
 })
 
+test("my math works", () => {
+  expect(problem(10, 2, 4)).toBe(3);
+  expect(problem(5, 4, 3)).toBe(3);
+})

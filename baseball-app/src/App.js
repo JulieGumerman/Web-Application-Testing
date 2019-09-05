@@ -65,3 +65,7 @@ function App() {
 }
 
 export default App;
+
+export const problem = (a, b, c) => {
+  return (a + b) / c;
+}
