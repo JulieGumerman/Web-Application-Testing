@@ -14,17 +14,35 @@ function App() {
 
   //functions for buttons
   const updateStrikes = () => {
-    setStrikes(strikes + 1);
-    console.log(strikes);
+    if (strikes === 2) {
+      setBalls(0);
+      setStrikes(0);
+    } else {
+      setStrikes(strikes + 1);
+    }
   }
 
   const updateBalls = () => {
-    setBalls(balls + 1);
+
+    if (balls === 3) {
+      setBalls(0);
+      setStrikes(0);
+    } else {
+      setBalls(balls + 1);
+    }
   }
 
   const onHit = () => {
     setBalls(0);
     setStrikes(0);
+  }
+
+  const foulIsFoul = () => {
+    if (strikes <= 1) {
+      setStrikes(strikes + 1);
+    } else {
+      setStrikes(strikes);
+    }
   }
 
   return (
@@ -37,6 +55,7 @@ function App() {
       <Dashboard 
         updateStrikes={updateStrikes}
         updateBalls={updateBalls}
+        foulIsFoul={foulIsFoul}
         onHit={onHit}
       />
     </div>
