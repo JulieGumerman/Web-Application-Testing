@@ -1,12 +1,12 @@
 import React from "react";
 
-const Dashboard = () => {
+const Dashboard = props => {
     return (
         <div>
-            <button>Strike</button>
-            <button>Ball</button>
+            <button onClick={props.updateStrikes}>Strike</button>
+            <button onClick={props.updateBalls}>Ball</button>
             <button>Foul</button>
-            <button>Hit</button>
+            <button onClick={props.onHit}>Hit</button>
         </div>
     );
 }
