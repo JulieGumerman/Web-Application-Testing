@@ -1,5 +1,5 @@
 import React from 'react';
-import { render } from "@testing-library/react";
+import { render, fireEvent } from "@testing-library/react";
 import ReactDOM from 'react-dom';
 import App from './App';
 
@@ -28,3 +28,4 @@ test("contains strike button", () => {
   const myDoc= render(<App/>);
   myDoc.queryAllByTitle(/strike/i);
 })
+
